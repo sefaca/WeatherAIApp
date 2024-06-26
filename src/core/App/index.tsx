@@ -1,11 +1,11 @@
 import type {FC} from 'react';
 import {Platform, StyleSheet, UIManager} from 'react-native';
 import {ThemeProvider} from 'styled-components/native';
-import {ApolloProvider} from '@apollo/client';
+// import {ApolloProvider} from '@apollo/client';
 import {NavigationContainer} from '@react-navigation/native';
 import StatusBar from '../../common/ui/components/StatusBar';
 import theme from '../../common/ui/theme';
-import {apolloClient} from '../apollo/client';
+// import {apolloClient} from '../apollo/client';
 import AppNavigator from '../navigation';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
@@ -35,16 +35,14 @@ export const Root: FC = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <ApolloProvider client={apolloClient}>
-        <SafeAreaProvider>
-          <GestureHandlerRootView style={styles.gestureHandler}>
-            <NavigationContainer>
-              <StatusBar />
-              <AppNavigator />
-            </NavigationContainer>
-          </GestureHandlerRootView>
-        </SafeAreaProvider>
-      </ApolloProvider>
+      <SafeAreaProvider>
+        <GestureHandlerRootView style={styles.gestureHandler}>
+          <NavigationContainer>
+            <StatusBar />
+            <AppNavigator />
+          </NavigationContainer>
+        </GestureHandlerRootView>
+      </SafeAreaProvider>
     </ThemeProvider>
   );
 };
