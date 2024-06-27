@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import Text from '../../common/ui/components/Text';
 
 export const Container = styled.View`
   flex: 1;
@@ -8,7 +9,9 @@ export const Container = styled.View`
   background-color: ${({theme}) => theme.colors.deepBlue};
 `;
 
-export const Text = styled.Text`
+export const TextTitle = styled(Text).attrs({
+  variant: 'body17-semibold',
+})`
   color: ${({theme}) => theme.colors.red};
 `;
 
@@ -21,4 +24,10 @@ export const Title = styled.Text`
 export const Info = styled.Text`
   font-size: 18px;
   color: ${({theme}) => theme.colors.red};
+`;
+
+export const WeatherIcon = styled.Image`
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
 `;
