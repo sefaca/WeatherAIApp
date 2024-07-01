@@ -9,6 +9,14 @@ export const Container = styled.View`
   background-color: ${({theme}) => theme.colors.deepBlue};
 `;
 
+export const AppTitle = styled(Text).attrs({
+  variant: 'headline2',
+})`
+  color: ${({theme}) => theme.colors.tealGreen};
+  margin-top: 40px;
+  font-weight: bold;
+`;
+
 export const TextTitle = styled(Text).attrs({
   variant: 'body17-semibold',
 })`
@@ -22,6 +30,12 @@ export const Title = styled.Text`
 `;
 
 export const Info = styled.Text`
+  font-size: 18px;
+  color: ${({theme}) => theme.colors.red};
+`;
+
+export const Recommendation = styled.Text`
+  margin-top: 10px;
   font-size: 18px;
   color: ${({theme}) => theme.colors.red};
 `;

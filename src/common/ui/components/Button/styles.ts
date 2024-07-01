@@ -6,9 +6,10 @@ export const Container = styled.View`
   background-color: ${({theme}) => theme.colors.red};
   border-width: 2px;
   border-color: ${({theme}) => theme.colors.tealGreen};
-  width: 70%;
-  height: 40px;
+  width: 50%;
+  height: 45px;
   border-radius: 16px;
+  margin: 5px;
 `;
 
 export const Pressable = styled(RectButton)`

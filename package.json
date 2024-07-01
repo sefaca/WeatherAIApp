@@ -17,6 +17,7 @@
     "@storybook/react-native": "^7.6.20",
     "apollo3-cache-persist": "^0.15.0",
     "axios": "^1.7.2",
+    "cohere-ai": "^7.10.6",
     "graphql": "^16.9.0",
     "i18next": "^23.11.5",
     "intl-pluralrules": "^2.0.1",

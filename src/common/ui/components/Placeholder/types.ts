@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import type {StyleProp, ViewStyle, TextInputProps} from 'react-native';
 
 export type Props = {

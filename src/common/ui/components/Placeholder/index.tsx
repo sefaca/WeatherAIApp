@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import type {FC} from 'react';
 import {memo} from 'react';
 import React from 'react';
