@@ -34,17 +34,18 @@ export const Blank: Props = ({useViewModel = useViewModelDefault}) => {
       );
     },
     fetchRecommendations: async (weatherData, selectedGender) => {
+      const genderText =
+        selectedGender === 'male'
+          ? "man's"
+          : selectedGender === 'female'
+          ? "woman's"
+          : "non-binary person's";
+
       return axios.post(
         'https://api.cohere.ai/generate',
         {
           model: 'command-r-plus',
-          prompt: `Provide more explicit recommendations on the clothes to wear for a ${
-            selectedGender === 'male' ? "man's" : "woman's"
-          } outfit and colors depending on the weather: ${
-            weatherData.weather[0].description
-          } with a temperature of ${
-            weatherData.main.temp
-          }°C in a concise manner with a maximum number of 700 letters.`,
+          prompt: `Provide more explicit recommendations on the clothes to wear for a ${genderText} outfit and colors depending on the weather: ${weatherData.weather[0].description} with a temperature of ${weatherData.main.temp}°C in a concise manner with a maximum number of 700 letters.`,
           max_tokens: 300,
         },
         {
@@ -95,6 +96,13 @@ export const Blank: Props = ({useViewModel = useViewModelDefault}) => {
                 onPress={() => {
                   setGender('female');
                   handleFetchRecommendations('female');
+                }}
+              />
+              <Button
+                title="Get tips for Non-Binary"
+                onPress={() => {
+                  setGender('non-binary');
+                  handleFetchRecommendations('non-binary');
                 }}
               />
               {recommendations && (

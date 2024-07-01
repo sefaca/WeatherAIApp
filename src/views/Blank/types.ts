@@ -15,7 +15,7 @@ export interface WeatherData {
   ];
 }
 
-export type Gender = 'male' | 'female';
+export type Gender = 'male' | 'female' | 'non-binary';
 
 export interface ViewModelParams {
   fetchWeatherData: (city: string) => Promise<any>;
