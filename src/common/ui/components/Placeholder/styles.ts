@@ -1,11 +1,11 @@
+/* eslint-disable prettier/prettier */
 import styled from 'styled-components/native';
-import Text from '../../components/Text';
 
 export const Container = styled.View`
   height: 40px;
   border-color: ${({theme}) => theme.colors.tealGreen};
   border-width: 1px;
-  margin: 20px;
+  margin: 10px;
   width: 100%;
   padding-horizontal: 10px;
   border-radius: 16px;
