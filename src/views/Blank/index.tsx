@@ -98,13 +98,6 @@ export const Blank: Props = ({useViewModel = useViewModelDefault}) => {
                   handleFetchRecommendations('female');
                 }}
               />
-              <Button
-                title="Get tips for Non-Binary"
-                onPress={() => {
-                  setGender('non-binary');
-                  handleFetchRecommendations('non-binary');
-                }}
-              />
               {recommendations && (
                 <Recommendation>{recommendations}</Recommendation>
               )}

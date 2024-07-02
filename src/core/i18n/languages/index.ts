@@ -7,7 +7,7 @@ const languages = Object.entries(availableLanguages).reduce(
   (acc, [key, value]) => ({
     ...acc,
     [`${key}`]: {
-      translation: value,
+      translation: value.resources,
     },
   }),
   {} as {
