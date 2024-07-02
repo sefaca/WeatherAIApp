@@ -1,26 +1,45 @@
+# WeatherAIApp
+
+WeatherAIApp is a React Native application that provides weather information and clothing recommendations based on the current weather conditions. The app utilizes the OpenWeatherMap API for weather data and Cohere API for clothing recommendations.
+
+## Features
+
+- Fetches current weather data based on user input
+- Provides clothing recommendations based on weather conditions and user gender
+- Supports multiple languages (English and Spanish)
+
+## Demo Video
+
+Watch the demo video to see WeatherAIApp in action:
+
+https://github.com/sefaca/WeatherAIApp/assets/32002286/0a2a2811-12fc-4584-b27e-aedb10068a89
+
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started
 
 >**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
-## Step 1: Start the Metro Server
+## Installation
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
-
-To start Metro, run the following command from the _root_ of your React Native project:
-
-```bash
-# using npm
-npm start
-
-# OR using Yarn
-yarn start
-```
-
-## Step 2: Start your Application
-
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/your-username/WeatherAIApp.git
+    ```
+2. Install dependencies:
+    ```sh
+    cd WeatherAIApp
+    npm install
+    ```
+3. Create a `.env` file with your API keys:
+    ```env
+    API_KEY=your_openweathermap_api_key
+    COHERE_API_KEY=your_cohere_api_key
+    ```
+4. Run the app:
+    ```sh
+    npm start
+    ```
 
 ### For Android
 
@@ -59,10 +78,32 @@ Now that you have successfully run the app, let's modify it.
 
 You've successfully run and modified your React Native App. :partying_face:
 
-### Now what?
+## Usage
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+1. Enter the city name to fetch weather data.
+2. Click "Get Weather" to retrieve the current weather information.
+3. Choose your gender to get clothing recommendations based on the weather.
+
+## Localization
+
+The app supports multiple languages. You can toggle between English and Spanish using the translate button on the main screen.
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/new-feature`)
+3. Commit your changes (`git commit -m 'Add some feature'`)
+4. Push to the branch (`git push origin feature/new-feature`)
+5. Open a pull request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements
+
+- [OpenWeatherMap API](https://openweathermap.org/api)
+- [Cohere API](https://cohere.ai/)
 
 # Troubleshooting
 
